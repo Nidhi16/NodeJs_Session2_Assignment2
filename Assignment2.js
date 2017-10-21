@@ -4,7 +4,7 @@ var outerFunc = function(outerParam) {
     var innerFunc = function(innerParam) {
         var result = outerParam * innerParam;
         console.log("Multiplication of outer parameter" + " (" + outerParam + ") " + "and inner parameter" + " (" + innerParam + ") " + "is: " + result);
-        alert("Multiplication of outer parameter" + " (" + outerParam + ") " + "and inner parameter" + " (" + innerParam + ") " + "is: " + result);
+        return result;
     };
     return innerFunc;
 };
@@ -12,4 +12,5 @@ var outerFunc = function(outerParam) {
 // calling outerFunc
 var closureFunction = outerFunc(4);
 // calling closure
-closureFunction(5);
+alert(closureFunction(5));
+console.log(closureFunction(5));
